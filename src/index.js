@@ -1,3 +1,3 @@
-import Debug from './debug';
+import Debug from './debug.vue';
 
 export default Debug;
