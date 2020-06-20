@@ -5,8 +5,8 @@ import buble from '@rollup/plugin-buble';
 import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import babel from '@rollup/plugin-babel';
 
-import babel from 'rollup-plugin-babel';
 import { uglify } from 'rollup-plugin-uglify';
 import postcss from 'rollup-plugin-postcss';
 import vue from 'rollup-plugin-vue';
@@ -44,7 +44,7 @@ const mainConfig = {
 	input: 'src/index.js',
 	// 输出
 	output: {
-		file: `${ENV_IS_DEV ? 'build' : 'dist'}/vr.min.js`,
+		file: `${ENV_IS_DEV ? 'build' : 'dist'}/debug.min.js`,
 		format: 'cjs',
 		sourcemap: ENV_IS_DEV ? undefined : `inline`,
 		globals: {
@@ -88,7 +88,7 @@ const mainConfig = {
 		// 使用babel，结合.babelrc
 		babel({ 
 			exclude: 'node_modules/**',
-			runtimeHelpers: true
+			babelHelpers: 'runtime'
 		}),
 		// 使用buble
 		buble(),
