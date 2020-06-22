@@ -1,0 +1,248 @@
+@import './theme.scss';
+@import './bem.scss';
+
+$block: wya-debug;
+@include block($block) {
+	@include element(c-red) {
+		color: $red;
+	}
+
+	@include element(c-brown) {
+		color: $brown;
+	}
+
+	@include element(c-purple1) {
+		color: $purple1;
+	}
+
+	@include element(bg-red) {
+		background-color: $red;
+	}
+
+	@include element(c-black-dark2) {
+		color: $black-dark2;
+	}
+
+	@include element(c-orange) {
+		color: $orange;
+	}
+
+	@include element(bg-gray-black) {
+		background-color: $gray-black;
+	}
+
+	@include element(c-dark-gray) {
+		color: $dark-gray;
+	}
+
+	@include element(bg-orange) {
+		background-color: $orange;
+	}
+
+	@include element(c-dark-orange) {
+		color: $dark-orange;
+	}
+
+	@include element(bg-dark-orange) {
+		background-color: $dark-orange;
+	}
+
+	@include element(c-light-orange) {
+		color: $light-orange;
+	}
+
+	@include element(bg-light-orange) {
+		background-color: $light-orange;
+	}
+
+	@include element(c-beans) {
+		color: $beans;
+	}
+
+	@include element(c-yellow) {
+		color: $yellow;
+	}
+
+	@include element(bg-yellow) {
+		background-color: $yellow;
+	}
+
+	@include element(c-blue) {
+		color: $blue;
+	}
+
+	@include element(bg-blue) {
+		background-color: $blue;
+	}
+
+	@include element(c-purple) {
+		color: $purple;
+	}
+
+	@include element(bg-purple) {
+		background-color: $purple;
+	}
+
+	@include element(c-golden) {
+		color: $golden;
+	}
+
+	@include element(bg-golden) {
+		background-color: $golden;
+	}
+
+	@include element(c-green) {
+		color: $green !important;
+	}
+
+	@include element(c-purple-light) {
+		color: $purple-light;
+	}
+
+	@include element(bg-green) {
+		background-color: $green;
+	}
+
+	@include element(bg-thin-green) {
+		background-color: $thin-green;
+	}
+
+	@include element(c-dark-green) {
+		color: $dark-green;
+	}
+
+	@include element(bg-cart-black) {
+		background-color: $card-black;
+	}
+
+	@include element(bg-dark-green) {
+		background-color: $dark-green;
+	}
+
+	@include element(c-light-green) {
+		color: $light-green;
+	}
+
+	@include element(bg-light-green) {
+		background-color: $light-green;
+	}
+
+	@include element(bg-purple-light) {
+		background-color: $purple-light;
+	}
+
+	@include element(c-dark-purple-blue) {
+		color: $dark-purple-blue;
+	}
+
+	@include element(bg-dark-purple-blue) {
+		background-color: $dark-purple-blue;
+	}
+
+	@include element(c-light-purple-blue) {
+		color: $light-purple-blue;
+	}
+
+	@include element(bg-light-purple-blue) {
+		background-color: $light-purple-blue;
+	}
+
+	@include element(c-link-blue) {
+		color: $link-blue;
+	}
+
+	@include element(bg-link-blue) {
+		background-color: $link-blue;
+	}
+
+	@include element(c-666) {
+		color: $c666;
+	}
+
+	@include element(c-82) {
+		color: $c82;
+	}
+
+	@include element(c-86) {
+		color: $c86;
+	}
+
+	@include element(c-888) {
+		color: $c888;
+	}
+
+	@include element(c-cyan) {
+		color: $cyan;
+	}
+
+	@include element(c-deep-cyan) {
+		color: $deep-cyan;
+	}
+
+	@include element(c-brown-light) {
+		color: $brown-light;
+	}
+
+	@include element(c-purple-blue) {
+		color: $purple-blue;
+	}
+
+	@include element(c-gray-blue) {
+		color: $gray-blue;
+	}
+
+	@include element(c-wechat) {
+		color: $wechat;
+	}
+
+	@include element(bg-wechat) {
+		background: $wechat;
+	}
+
+	@include element(c-alipay) {
+		color: $alipay;
+	}
+
+	@include element(c-cash) {
+		color: $cash;
+	}
+
+	@include element(bg-cash) {
+		background: $cash;
+	}
+
+	@include element(bg-alipay) {
+		background: $alipay;
+	}
+
+	@include element(bg-red-orange) {
+		background: $red-orange;
+	}
+
+	@include element(c-red-orange) {
+		color: $red-orange;
+	}
+
+	@include element(m-b-32) {
+		margin-bottom: 32px;
+	}
+
+	@include element(m-b-26) {
+		margin-bottom: 26px;
+	}
+
+	@include element(bg-f4) {
+		background-color: #f4f4f4;
+	}
+
+	@include element(bg-f2) {
+		background-color: $cf2;
+	}
+	@include element(flex) {
+		display: flex;
+	}
+	@include element(break) {
+		word-break: break-all;
+		word-wrap: break-word;
+	}
+}
