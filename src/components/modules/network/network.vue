@@ -1,7 +1,12 @@
 <template>
 	<div class="wya-debug_network-container">
 		<div>
-			network
+			request
+			<span
+				class="iconfont iconclear wya-debug__absolute"
+				style="left: 10px; top: 8px"
+				@click="handleClear"
+			/>
 		</div>
 	</div>
 </template>
@@ -19,7 +24,9 @@ export default {
 
 	},
 	methods: {
+		handleClear() {
 
+		}
 	}
 };
 </script>

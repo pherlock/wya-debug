@@ -31,7 +31,10 @@
     "url": "https://github.com/wya-team/wya-debug/issues"
   },
   "dependencies": {
-    "draggabilly": "^2.3.0"
+    "draggabilly": "^2.3.0",
+    "vue-json-pretty": "^1.6.3",
+    "vue-json-viewer": "^2.2.12",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",

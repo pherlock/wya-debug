@@ -1,5 +1,5 @@
 import console from './console';
-import network from './network.vue';
+import network from './network';
 import resources from './resources.vue';
 import sources from './sources.vue';
 import info from './info.vue';

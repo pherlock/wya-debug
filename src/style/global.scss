@@ -158,7 +158,9 @@ $block: wya-debug;
 	@include element(c-666) {
 		color: $c666;
 	}
-
+	@include element(c-ac) {
+		color: $cac;
+	}
 	@include element(c-82) {
 		color: $c82;
 	}
@@ -238,8 +240,51 @@ $block: wya-debug;
 	@include element(bg-f2) {
 		background-color: $cf2;
 	}
+	@include element(b) {
+		border: 1px solid #d9d9d9;
+	}
+	@include element(bt) {
+		border-top: 1px solid #d9d9d9;
+	}
+	@include element(br) {
+		border-right: 1px solid #d9d9d9;
+	}
+	@include element(bb) {
+		border-bottom: 1px solid #d9d9d9;
+	}
+	@include element(bl) {
+		border-left: 1px solid #d9d9d9;
+	}
 	@include element(flex) {
 		display: flex;
+	}
+	@include element(fd-c) {
+		flex-direction: column;
+	}
+	@include element(jc-sb) {
+		justify-content: space-between;
+	}
+	@include element(jc-c) {
+		justify-content: center;
+	}
+	@include element(jc-sa) {
+		justify-content: space-around;
+	}
+	@include element(ai-c) {
+		align-items: center;
+	}
+	@include element(ai-sa) {
+		align-items: space-around;
+	}
+	@include element(ai-sb) {
+		align-items: space-between;
+	}
+	@include element(relative) {
+		position: relative;
+	}
+
+	@include element(absolute) {
+		position: absolute;
 	}
 	@include element(break) {
 		word-break: break-all;

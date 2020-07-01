@@ -1,5 +1,10 @@
 <template>
-	<div class="wya-debug_console-tool-bar">
+	<div class="wya-debug_console-tool-bar wya-debug__relative">
+		<span
+			class="iconfont iconclear wya-debug__absolute"
+			style="left: 10px; top: 8px"
+			@click="handleClear"
+		/>
 		<span
 			v-for="(item, key) in toolList"
 			:key="key"
@@ -32,22 +37,23 @@ export default {
 		handleClick(data) {
 			this.currentType = data.value;
 			this.$emit('change', data.label.toLowerCase());
+		},
+		handleClear() {
+			this.$emit('clear');
 		}
 	}
 };
 </script>
 <style lang='scss'>
 .wya-debug_console-tool-bar{
-	position: absolute;
 	width: 100%;
 	height: 40px;
-	left: 0;
-	top: 0;
 	cursor: default;
 	padding: 10px 10px 10px 40px;
 	background: #fff;
 	overflow: hidden;
-	z-index: 99999;
+	z-index: 9999;
+	border-bottom: 1px solid #eceffe;
 	._tool-item {
 		cursor: pointer;
 		color: #707d8b;

@@ -11,6 +11,14 @@ export const isErr = (val) => {
 	return objToStr(val) === '[object Error]';
 };
 
+export const isWin = (val) => {
+	return objToStr(val) === '[object Window]';
+};
+
+export const isDate = (val) => {
+	return objToStr(val) === '[object Date]';
+};
+
 export const escape = ((exports) => {
 	exports.map = {
 		'&': '&amp;',
@@ -98,4 +106,54 @@ export const upperFirst = (val) => {
 export const getObjType = (obj) => {
 	if (obj.constructor && obj.constructor.name) return obj.constructor.name;
 	return upperFirst({}.toString.call(obj).replace(/(\[object )|]/g, ''));
+};
+export const optimizeCb = (fn, ctx, argCount) => {
+	if (isUndef(ctx)) return fn;
+
+	switch (argCount == null ? 3 : argCount) {
+		case 1:
+			return function (val) {
+				return fn.call(ctx, val);
+			};
+
+		case 3:
+			return function (val, idx, collection) {
+				return fn.call(ctx, val, idx, collection);
+			};
+
+		case 4:
+			return function (accumulator, val, idx, collection) {
+				return fn.call(ctx, accumulator, val, idx, collection);
+			};
+		default:
+			break;
+	}
+
+	return function () {
+		return fn.apply(ctx, arguments);
+	};
+};
+
+export const isArrLike = (val) => {
+	let MAX_ARR_IDX = 2 ** 53 - 1;
+	if (!val) return false;
+	let len = val.length;
+	return isNum(len) && len >= 0 && len <= MAX_ARR_IDX && !isFn(val);
+};
+
+export const each = (obj, iterator, ctx) => {
+	iterator = optimizeCb(iterator, ctx);
+	let i; let len;
+	if (isArrLike(obj)) {
+		for (i = 0, len = obj.length; i < len; i++) {
+			iterator(obj[i], i, obj);
+		}
+	} else {
+		let _keys = Object.keys(obj);
+
+		for (i = 0, len = _keys.length; i < len; i++) {
+			iterator(obj[_keys[i]], _keys[i], obj);
+		}
+	}
+	return obj;
 };
